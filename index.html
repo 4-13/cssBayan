@@ -20,12 +20,67 @@
 		<main class="page__main main">
 			<div class="container main__container">
 				<h1 class="main__title">Pure CSS Accordion</h1>
-				<div class="accordion"></div>
+				<div class="accordion">
+					<svg xmlns="http://www.w3.org/2000/svg"
+						style="display:none">
+						<!-- whole text from ./assets/plus.svg.   svg tag replace to symbol. add id -->
+						<symbol id="plus"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M12 7V17M7 12H17M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+								stroke="inherit"
+								stroke-width="1.5"
+								stroke-linecap="round"
+								stroke-linejoin="round" />
+						</symbol>
+					</svg>
+
+					<div class="accordion__item accordion-item">
+						<input type="radio"
+							class="r-only accordion-item__input"
+							id="accordion-input-1"
+							name="accordion">
+						<label class="accordion-item__content"
+							for="accordion-input-1">
+							<span class="accordion-item__description">description</span>
+							<svg class="accordion-item__icon"
+								stroke="red"
+								aria-hidden="true">
+								<use xlink:href="#plus"></use>
+							</svg>
+							<img class="accordion-item__image"
+								src="https://cataas.com/cat"
+								alt="">
+
+						</label>
+					</div>
+					<div class="accordion__item accordion-item">
+						<input type="radio"
+							checked
+							class="r-only accordion-item__input"
+							id="accordion-input-2"
+							name="accordion">
+						<label class="accordion-item__content"
+							for="accordion-input-2">
+							<span class="accordion-item__description">description</span>
+							<svg class="accordion-item__icon"
+								stroke="red"
+								aria-hidden="true">
+								<use xlink:href="#plus"></use>
+							</svg>
+							<img class="accordion-item__image"
+								src="https://cataas.com/cat"
+								alt="">
+
+						</label>
+					</div>
+				</div>
 			</div>
 		</main>
 		<footer class="page__footer footer"></footer>
 	</div>
-
 </body>
 
 </html>
