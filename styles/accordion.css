@@ -1,51 +1,81 @@
-.accordion {}
+@layer vars,
+base,
+layout,
+state,
+custom;
 
-
-.accordion-item {
-	border: 1px solid green
+@layer vars {
+	.accordion {
+		/* cross icon size */
+		--button-block-size: 2rem;
+		--button-inline-size: 2rem;
+		/* content max-block-size */
+		--content-row-block-size: 25rem;
+		/* transitions */
+		--transition-duration: .4s;
+		--transition-timing-function: linear;
+		--transition-content-property: grid-template-rows;
+	}
 }
 
-.accordion-item:has(:checked) {}
 
+@layer base {
+	.accordion-item {
+		border: 1px solid green
+	}
 
-.accordion-item__content {
-	display: grid;
-	grid-template-areas:
-		'description icon'
-		'image image';
-	grid-template-columns: 1fr auto;
-	grid-template-rows: min-content min-content;
+	.accordion-item__description {
+		background-color: red;
+	}
+
+	.accordion-item__image {
+		display: block;
+		margin-inline: auto;
+		max-block-size: 100%;
+		max-inline-size: 100%;
+		user-select: none;
+	}
+
+	.accordion-item__icon {
+		inline-size: var(--button-block-size);
+		block-size: var(--button-block-size);
+	}
 }
 
-.accordion-item__input:checked + .accordion-item__content .accordion-item__image-wrapper {
-	max-block-size: 30rem;
-	background-color: red;
+@layer layout {
+	.accordion-item__content {
+		display: grid;
+		grid-template-areas:
+			'description icon'
+			'content content';
+		grid-template-columns: 1fr auto;
+		grid-template-rows: min-content var(--row-block-size);
+		transition: var(--transition-content-property) var(--transition-duration) var(--transition-timing-function);
 
+	}
+
+	.accordion-item__description {
+		grid-area: description;
+		align-self: center;
+	}
+
+	.accordion-item__icon {
+		grid-area: icon;
+		align-self: center;
+		justify-self: end;
+	}
+
+	.accordion-item__content-wrapper {
+		grid-area: content;
+	}
 }
 
-.accordion-item__description {
-	grid-area: description;
-	background-color: red;
-	align-self: center;
+@layer state {
+	.accordion-item__content {
+		--row-block-size: 0;
+	}
 
-}
-
-.accordion-item__icon {
-	grid-area: icon;
-	align-self: center;
-	justify-self: end;
-	inline-size: 4rem;
-	block-size: 4rem;
-}
-
-.accordion-item__image-wrapper {
-	grid-area: image;
-	justify-self: center;
-	max-block-size: 0;
-	transition: max-block-size .3s linear;
-}
-
-.accordion-item__image {
-	max-block-size: 100%;
-	max-inline-size: 100%;
+	.accordion-item__input:checked + .accordion-item__content {
+		--row-block-size: var(--content-row-block-size);
+	}
 }
