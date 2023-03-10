@@ -1,0 +1,12 @@
+:root {
+	--container-width: 1170px;
+	--container-padding-inline: 1rem;
+	--bg-transparent: hsla(0, 0%, 0%, .75);
+
+
+	--davys-gray: hsla(258, 9%, 29%, 1);
+	--federal-blue: hsla(245, 100%, 15%, 1);
+	--maize: hsla(55, 100%, 77%, 1);
+	--tea-green: hsla(96, 100%, 85%, 1);
+	--celestial-blue: hsla(205, 48%, 56%, 1);
+}
