@@ -10,6 +10,7 @@
 }
 
 .main__container {
+	--container-width: 45rem;
 	padding-block: 1rem;
 	border-radius: 1rem;
 	background-color: var(--bg-transparent);

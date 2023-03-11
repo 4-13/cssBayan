@@ -1,6 +1,6 @@
 /* https://matthewjamestaylor.com/responsive-font-size */
 html {
-	font-size: calc(15px + 0.390625vw);
+	font-size: calc(0.9375rem + 0.390625vw);
 }
 
 /*

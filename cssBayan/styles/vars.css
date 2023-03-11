@@ -1,5 +1,5 @@
 :root {
-	--container-width: 1170px;
+	--container-width: 73.125rem;
 	--container-padding-inline: 1rem;
 	--bg-transparent: hsla(0, 0%, 0%, .75);
 	--red: hsla(0, 100%, 50%, 1);

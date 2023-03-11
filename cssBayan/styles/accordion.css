@@ -36,7 +36,7 @@ custom;
 	}
 
 	.accordion-item:has(:focus-visible) {
-		outline: 2px dashed var(--tea-green);
+		outline: 0.125rem dashed var(--tea-green);
 	}
 
 	.accordion-item__header {
@@ -195,20 +195,20 @@ custom;
 	30%,
 	50%,
 	70% {
-		transform: translateX(-10px);
+		transform: translateX(-0.625rem);
 	}
 
 	20%,
 	40%,
 	60% {
-		transform: translateX(10px);
+		transform: translateX(0.625rem);
 	}
 
 	80% {
-		transform: translateX(8px);
+		transform: translateX(0.5rem);
 	}
 
 	90% {
-		transform: translateX(-8px);
+		transform: translateX(-0.5rem);
 	}
 }
