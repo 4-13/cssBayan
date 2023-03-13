@@ -3,8 +3,10 @@ html {
 	font-size: calc(0.9375rem + 0.390625vw);
 }
 
-html::-webkit-scrollbar {
-	display: none;
+@media (hover: hover) and (pointer: fine) {
+	html {
+		overflow-y: scroll;
+	}
 }
 /*
 	Use in conjunction with .sr-only to only display content when it's focused.
