@@ -1,0 +1,17 @@
+.main__title {
+	margin: 0;
+	text-align: center;
+	color: var(--tea-green);
+}
+
+.main {
+	padding-block: 3rem;
+	padding-inline: 1rem;
+}
+
+.main__container {
+	--container-width: 45rem;
+	padding-block: 1rem;
+	border-radius: 1rem;
+	background-color: var(--bg-transparent);
+}

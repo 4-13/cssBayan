@@ -1,0 +1,16 @@
+.page {
+	display: grid;
+	grid-template-rows: 1fr auto;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		'main';
+	min-block-size: 100vh;
+	min-block-size: 100svh;
+	background-image: url("../assets/pattern.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.page__main {
+	grid-area: main;
+}
